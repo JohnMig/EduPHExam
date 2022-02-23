@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #ecf0f1;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 300px 400px;
+  justify-content: center;
+  padding: 1rem;
+  padding-top: 3rem;
+}
+
+.grade-input {
+  display: flex;
+  flex-direction: column;
+  max-width: 15rem;
+}
+
+.grade-input textarea {
+  resize: none;
+  margin-top: 0.3rem;
+  padding-top: 0.25rem;
+  padding-left: 0.25rem;
+} 
+
+.grade-input label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.grade-list h2 {
+  margin-bottom: 0.3rem;
+}
+
+.grade-list_content {
+  overflow: auto;
+  max-height: 21.5rem;
+  box-shadow: 1px 1px 1px #999;
+}
+
+.grade-list_content table,
+.grade-list_content td,
+.grade-list_content th {
+  border-collapse: collapse;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.grade-list_content table {
+  max-width: 400px;
+  max-height: 500px;
+  min-width: 100%;
+}
+
+.grade-list_content thead {
+  background-color: #fff;
+  box-shadow: 1px 1px 1px #999;
+  box-shadow: 1px 1px 1px #999;
+}
+
+.grade-list_controls {
+  text-align: right;
+}
+
+.grade-list_controls button {
+  padding: 0.5rem;
+}
+
+.grade-input_controls button {
+  padding: 0.5rem 2rem;
+  margin-top: 1rem;
+}
+
+.grade-list_controls button:first-child {
+  margin-right: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+
+@media (max-width: 500px) {
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-wrapper > *:first-child {
+    margin-bottom: 2rem;
+  }
+}
