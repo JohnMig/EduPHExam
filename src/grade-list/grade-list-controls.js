@@ -24,8 +24,9 @@ window.addEventListener('DOMContentLoaded', () => {
     .addEventListener('click', () => {
       const grades = state.grades.map((grade) => grade.split(' ').at(-1))
       const average = (grades.reduce((acc, value) => acc + (+value), 0) / grades.length).toFixed(2)
-      if (average)
+      if (average && average !== 'NaN') {
         _('.average').innerHTML = 
         `<div style="color: green; margin-top: 1rem;">Class Average Grade is ${average}.</div>`
+      }
     })
 })
